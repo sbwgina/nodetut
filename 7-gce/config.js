@@ -45,7 +45,7 @@ nconf
   // 4. Defaults
   .defaults({
     // Typically you will create a bucket with the same name as your project ID.
-    CLOUD_BUCKET: '',
+    CLOUD_BUCKET: 'nodetut',
 
     // dataBackend can be 'datastore', 'cloudsql', or 'mongodb'. Be sure to
     // configure the appropriate settings for each storage engine below.
@@ -54,7 +54,7 @@ nconf
     DATA_BACKEND: 'datastore',
 
     // This is the id of your project in the Google Cloud Developers Console.
-    GCLOUD_PROJECT: '',
+    GCLOUD_PROJECT: 'nodetut',
 
     // Connection url for the Memcache instance used to store session data
     MEMCACHE_URL: '127.0.0.1:11211',
@@ -68,8 +68,8 @@ nconf
     MYSQL_PASSWORD: '',
     MYSQL_HOST: '',
 
-    OAUTH2_CLIENT_ID: '',
-    OAUTH2_CLIENT_SECRET: '',
+    OAUTH2_CLIENT_ID: '905770379413-8kleiql9721p8b0creohggpc6a54760f.apps.googleusercontent.com',
+    OAUTH2_CLIENT_SECRET: 'cjibtVONP0ohxSLijW1LW649',
     OAUTH2_CALLBACK: 'http://localhost:8080/auth/google/callback',
 
     // Port the HTTP server
@@ -99,6 +99,6 @@ if (nconf.get('DATA_BACKEND') === 'cloudsql') {
 function checkConfig (setting) {
   if (!nconf.get(setting)) {
     throw new Error('You must set the ' + setting + ' environment variable or' +
-      ' add it to config.json!');
+      ' add it to config.json! Do it!');
   }
 }
